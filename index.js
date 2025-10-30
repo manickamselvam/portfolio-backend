@@ -8,7 +8,10 @@ const Mailgun = require("mailgun.js");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://my-new-portfolio-seven-chi.vercel.app",
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
