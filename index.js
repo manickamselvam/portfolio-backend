@@ -10,7 +10,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://my-new-portfolio-seven-chi.vercel.app",
+      "https://nagamanickamselvamportfolio.vercel.app",
     ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
