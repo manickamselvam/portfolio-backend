@@ -5,12 +5,18 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://yourfrontenddomain.com"],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
   host: "smtp.mail.yahoo.com",
-  port: 465,
+  port: 2525,
   secure: true,
   auth: {
     user: process.env.YAHOO_EMAIL,
